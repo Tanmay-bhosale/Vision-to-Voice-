@@ -1,0 +1,67 @@
+Installation
+
+Clone the repository:
+
+git clone https://github.com/yourusername/yolov8-voice-feedback.git
+cd yolov8-voice-feedback
+
+Install the required Python packages:
+
+pip install -r requirements.txt
+
+Download the YOLOv8 Nano pre-trained weights:
+
+ultralytics models download yolov8n.pt
+
+Usage
+
+Command-Line Arguments
+
+-i, --image: Path to an image file for detection.
+
+-v, --video: Path to a video file for detection.
+
+-c, --camera: Use the local webcam.
+
+-ip, --ip_camera: URL of an IP camera stream (e.g., http://192.168.0.128:8080/video).
+
+Examples
+
+Detect objects using a webcam:
+
+python yolov5.py --camera
+
+Detect objects from an image file:
+
+python yolov5.py --image path/to/image.jpg
+
+Detect objects from a video file:
+
+python yolov5.py --video path/to/video.mp4
+
+Detect objects from an IP camera stream:
+
+python yolov5.py --ip_camera http://192.168.0.128:8080/video
+
+Project Structure
+
+.
+├── yolov5.py            # Main Python script for object detection
+├── requirements.txt     # Python dependencies
+├── README.md            # Project documentation
+├── examples/            # Example images and videos (optional)
+└── weights/             # YOLOv8 pre-trained weights (not included in the repo)
+
+requirements.txt
+
+ultralytics
+opencv-python
+pyttsx3
+
+Notes
+
+Ensure the yolov8n.pt file is downloaded and placed in the appropriate location.
+
+The project is optimized for low-end devices by leveraging YOLOv8 Nano and frame skipping.
+
+Adjust frame_skip and pause_time parameters in the script for better performance as needed.
