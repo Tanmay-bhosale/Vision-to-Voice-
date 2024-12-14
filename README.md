@@ -33,3 +33,7 @@ opencv-python
 pyttsx3
 
 argparse
+
+# Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests for improvements or bug fixes.
